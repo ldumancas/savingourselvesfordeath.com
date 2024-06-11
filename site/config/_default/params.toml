@@ -36,8 +36,8 @@ smartTOCHideUnfocusedChildren = false
   showScrollToTop = true
 
 [homepage]
-  layout = "hero" # valid options: page, profile, hero, card, background, custom
-  # homepageImage = "/img/iceland.jpg" # used in: hero, and card
+  layout = "background" # valid options: page, profile, hero, card, background, custom
+  homepageImage = "/img/hero_image_ai_generated_placeholder.png" # used in: hero, and card
   showRecent = false
   showRecentItems = 6
   showMoreLink = true
@@ -132,13 +132,6 @@ smartTOCHideUnfocusedChildren = false
 [umamiAnalytics]
   # websiteid = "ABC12345"
   # domain = "llama.yoursite.com"
-
-[buymeacoffee]
-  identifier = "nunocoracao"
-  globalWidget = true
-  globalWidgetMessage = ""
-  globalWidgetColor = "#FFDD00"
-  globalWidgetPosition = "Right"
 
 [verification]
   # google = ""
