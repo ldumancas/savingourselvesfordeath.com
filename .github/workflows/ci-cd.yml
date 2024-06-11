@@ -14,7 +14,7 @@ jobs:
       - name: Generate Website
         shell: bash
         run: |
-          docker run -v $PWD/static-site:/mnt ldumancas/hugo-build:latest
+          docker run -v $PWD/site:/mnt ldumancas/hugo-build:latest
       
       - name: Save Artifacts
         uses: actions/upload-artifact@v4
@@ -25,7 +25,7 @@ jobs:
       - name: Deploy to S3
         shell: bash
         run: |
-          aws s3 sync ./static-site/public s3://savingourselvesfordeath.com
+          aws s3 sync ./site/public s3://savingourselvesfordeath.com
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_NAME }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY_SECRET }}
