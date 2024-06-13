@@ -11,16 +11,16 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Generate Website
-        shell: bash
-        run: |
-          docker run -v $PWD/site:/mnt ldumancas/hugo-build:latest
+      # - name: Generate Website
+      #   shell: bash
+      #   run: |
+      #     docker run -v $PWD/site:/mnt ldumancas/hugo-build:latest
       
-      - name: Save Artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          path: ./site/public/
-          overwrite: true
+      # - name: Save Artifacts
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     path: ./site/public/
+      #     overwrite: true
 
       - name: Deploy to S3
         shell: bash
